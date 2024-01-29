@@ -12,6 +12,9 @@
                         "paths": [
                             [
                                 "$.repository", "merge-template"
+                            ],
+                            [
+                                "$.scripts", "merge-template"
                             ]
                         ]
                     }
