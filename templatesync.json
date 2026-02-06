@@ -2,24 +2,22 @@
     "ignore": [
         "my-tools/**"
     ],
-    "merge": {
-        ".json": {
-
-            "rules": [
-                {
-                    "glob": "package.json",
-                    "options": {
-                        "paths": [
-                            [
-                                "$.repository", "merge-template"
-                            ],
-                            [
-                                "$.scripts", "merge-template"
-                            ]
-                        ]
-                    }
-                }
-            ]
+    "merge": [
+        {
+            "glob": "**/*.json",
+            "plugin": "_json",
+            "options": {
+                "paths": [
+                    [
+                        "$.repository",
+                        "merge-template"
+                    ],
+                    [
+                        "$.scripts",
+                        "merge-template"
+                    ]
+                ]
+            }
         }
-    }
+    ]
 }
